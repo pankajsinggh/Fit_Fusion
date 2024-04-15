@@ -1,0 +1,17 @@
+/* .banner{ */
+    /* background-image: url('../../../../assets/images/background.jpg'); */
+
+
+
+ /* background-attachment: scroll;
+  background-attachment: fixed; 
+  background-size: cover;
+    height: 102vh;
+    margin-bottom: 20px;
+    border: 2px solid black;
+} */
+
+.banner{
+  background-color: rgba(190, 245, 255, 0.3);
+
+}

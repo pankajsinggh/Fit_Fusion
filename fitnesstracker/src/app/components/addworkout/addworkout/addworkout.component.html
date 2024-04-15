@@ -1,0 +1,58 @@
+<div class="container mb-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card mt-5 transparent-card"> 
+        <div class="card-body">
+          <h2 class="text-center mb-3 heading-text">Add Workout</h2>
+          <form [formGroup]="workoutForm" (ngSubmit)="onSubmit()">
+            <div class="form-group"style="text-align: left; color:black;">
+              <label for="date">Date:<small>*</small></label>
+              <input type="date" id="date" formControlName="date" class="form-control input-area" required>
+              <div     style="font-size: 11px;"  *ngIf="workoutForm.controls['date'].invalid && (workoutForm.controls['date'].dirty || workoutForm.controls['date'].touched)" class="text-danger">
+                Date is required.
+              </div>
+            </div>
+            <div class="form-group"style="text-align: left; color:black;">
+              <label for="duration">Duration (format: HH:MM:SS):<small>*</small></label>
+              <input type="text" id="duration" formControlName="duration" class="form-control input-area" required>
+              <div   style="font-size: 11px;"  *ngIf="workoutForm.controls['duration'].invalid && (workoutForm.controls['duration'].dirty || workoutForm.controls['duration'].touched)" class="text-danger">
+                Duration is required.
+              </div>
+            </div>
+            <div class="form-group"style="text-align: left; color:black;  ">
+              <label for="intensity">Intensity:<small>*</small></label>
+              <select id="intensity" formControlName="intensity" class="form-control input-area" required>
+                <option value="" ></option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <!-- Add more options as needed -->
+              </select>                 <div   style="font-size: 11px;"  *ngIf="workoutForm.controls['intensity'].invalid && (workoutForm.controls['intensity'].dirty || workoutForm.controls['intensity'].touched)" class="text-danger">
+                Intensity is required.
+              </div>
+            </div>
+            <div class="form-group"style="text-align: left; color:black;">
+              <label for="caloriesBurned">Calories Burned:<small>*</small></label>
+              <input type="number" id="caloriesBurned" formControlName="caloriesBurned" class="form-control input-area" required>
+              <div   style="font-size: 11px;"  *ngIf="workoutForm.controls['caloriesBurned'].invalid && (workoutForm.controls['caloriesBurned'].dirty || workoutForm.controls['caloriesBurned'].touched)" class="text-danger">
+                Calories Burned is required.
+              </div>
+            </div>
+            <div class="form-group"style="text-align: left; color:black;">
+              <label for="weightLifted">Weight Lifted:<small>*</small></label>
+              <input type="number" id="weightLifted" formControlName="weightLifted" class="form-control input-area" required>
+              <div    style="font-size: 11px;"  *ngIf="workoutForm.controls['weightLifted'].invalid && (workoutForm.controls['weightLifted'].dirty || workoutForm.controls['weightLifted'].touched)" class="text-danger">
+                Weight Lifted is required.
+              </div>
+            </div>
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-link submit-button">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

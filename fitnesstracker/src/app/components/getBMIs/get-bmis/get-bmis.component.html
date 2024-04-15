@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <button class="btn btn-link submit-button mb-3 mt-3" (click)="fetchbmis()">BMIs Overview</button>
+        <div *ngIf="bmis.length > 0">
+          <h3>BMIs:</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>BMI</th>
+                
+                <th>Recorded Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let bmi of bmis">
+                <td>{{ bmi.bmi }}</td>
+                <td>{{ bmi.recordedDate | date}}</td>
+            
+                <td>
+                   <button class="btn btn-sm btn-danger" (click)="deletebmi(bmi.bmiRecordId)">Delete</button>
+                  <!-- <input type="number" [(ngModel)]="goal.progressToAdd" placeholder="Enter Progress" class="form-control mr-2" style="width: 80px;">
+                  <button class="btn btn-sm btn-success" (click)="addProgress(goal.goalId,goal.progressToAdd)">Add Progress</button>  -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngIf="bmis.length === 0 && isLoggedIn">
+          <p>No BMI is available.</p>
+        </div>
+        <div *ngIf="!isLoggedIn">
+          <p>Please log in to view BMIs.</p>
+        </div>
+      </div>
+    </div>
+  </div>

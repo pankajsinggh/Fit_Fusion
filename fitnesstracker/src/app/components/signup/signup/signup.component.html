@@ -1,0 +1,86 @@
+<div class="outer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card  transparent-card">
+          <div class="card-header">
+            <h3 class="text-center font-weight-bold heading-text">Sign Up</h3>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="signUpForm">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-user"></i></span> -->
+                  </div>
+                  <input formControlName="firstname" type="text" class="form-control input-area" placeholder="First Name" />
+                </div>
+                <small   style="font-size: 12px;"   *ngIf="signUpForm.get('firstname')?.hasError('required') && signUpForm.get('firstname')?.touched" class="text-danger">FirstName Password is required</small>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-user"></i></span> -->
+                  </div>
+                  <input formControlName="lastname" type="text" class="form-control  input-area" placeholder="Last Name" />
+                </div>
+                <small   style="font-size: 12px;"   *ngIf="signUpForm.get('lastname')?.hasError('required') && signUpForm.get('lastname')?.touched" class="text-danger">LastName Password is required</small>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-envelope"></i></span> -->
+                  </div>
+                  <input formControlName="email" type="email" class="form-control  input-area" placeholder="Email" />
+                </div>
+                <small   style="font-size: 12px;"   *ngIf="signUpForm.get('email')?.hasError('required') && signUpForm.get('email')?.touched"
+                  class="text-danger">Email is required</small>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-venus-mars"></i></span> -->
+                  </div>
+                  <select formControlName="gender" class="form-control">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <small  style="font-size: 12px;"   *ngIf="signUpForm.get('gender')?.hasError('required') && signUpForm.get('gender')?.touched"
+                  class="text-danger">Gender is required</small>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-lock"></i></span> -->
+                  </div>
+                  <input formControlName="password" type="password" class="form-control input-area" placeholder="Password" />
+                </div>
+                <small style="font-size: 12px;"   *ngIf="signUpForm.get('password')?.hasError('required') && signUpForm.get('password')?.touched"
+                  class="text-danger">Password is required</small>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-lock"></i></span> -->
+                  </div>
+                  <input formControlName="confirmPassword" type="password" class="form-control input-area"
+                    placeholder="Confirm Password" />
+                </div>
+
+                <small style="font-size: 12px;"  
+                  *ngIf="signUpForm.get('confirmPassword')?.hasError('required') && signUpForm.get('confirmPassword')?.touched"
+                  class="text-danger">Confirm Password is required</small>
+              </div>
+              <div class="row mt-3 button-div ">
+                <div class="col-md-6  offset-md-3  text-center">
+              <button (click)="onSignUp()" type="submit" class="btn btn-link   submit-button">Sign Up</button></div></div>
+              <div class="text-center mt-3">Already have an account? <a routerLink="/loginpage">Login</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

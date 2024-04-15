@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card mt-5 transparent-card"> 
+        <div class="card-body mt-3">
+          <h2 class="text-center mb-3 heading-text">Add Goal</h2>
+          <form [formGroup]="goalForm" (ngSubmit)="onSubmit()">
+            <div class="form-group goalheading">
+              <label for="goalType">Goal Type:<small>*</small></label>
+              <select id="goalType" formControlName="goalType" class="form-control input-area" required>
+                <option value="" ></option>
+                <option value="Running">Running (km)</option>
+                <option value="Swimming">Swimming (meters)</option>
+                <option value="Cycling">Cycling (km)</option>
+                <option value="Walking">Walking (steps)</option>
+                <option value="Weightlifting">Weightlifting (reps)</option>
+                <!-- Add more options as needed -->
+              </select>              <div  style="font-size: 11px;"  *ngIf="goalForm.controls['goalType'].invalid && (goalForm.controls['goalType'].dirty || goalForm.controls['goalType'].touched)" class="text-danger">
+                Goal Type is required.
+              </div>
+            </div>
+            <div class="form-group goalheading">
+              <label for="targetMetric">Target Metric:<small>*</small></label>
+              <input type="number" id="targetMetric" formControlName="targetMetric" class="form-control input-area" required>
+              <div   style="font-size: 11px;"  *ngIf="goalForm.controls['targetMetric'].invalid && (goalForm.controls['targetMetric'].dirty || goalForm.controls['targetMetric'].touched)" class="text-danger">
+                Target Metric is required.
+              </div>
+            </div>
+            <div class="form-group goalheading">
+              <label for="deadline">Deadline Date:<small>*</small></label>
+              <input type="date" id="deadline"[min]="todayDate" formControlName="deadline" class="form-control input-area" required>
+              <div  style="font-size: 11px;"  *ngIf="goalForm.controls['deadline'].invalid && (goalForm.controls['deadline'].dirty || goalForm.controls['deadline'].touched)" class="text-danger">
+                Deadline Date is required.
+              </div>
+            </div>
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-link submit-button">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

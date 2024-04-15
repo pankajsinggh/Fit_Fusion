@@ -1,0 +1,55 @@
+.transparent-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white color */
+    border-radius: 10px; /* Small shape box */
+    padding: 20px;
+    width:400px;
+    
+
+  }
+  .submit-button{
+    font-size: 1.25rem;
+    /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+    font-weight: 1200; 
+    text-decoration: none;
+    color:black;
+    letter-spacing: 6px;
+
+  }
+  .button-div{
+    background-color: rgba(255, 255, 255, 0.3);
+
+  }
+
+  .heading-text{
+    letter-spacing: 4px;
+    font-size: 1.25rem;
+    /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+    font-weight: 800; 
+    background-color: rgba(255, 255, 255, 0.3);
+    
+}
+
+.input-text{
+    letter-spacing: 3px;
+
+    font-size: 1rem;
+    /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+    font-weight: 650; 
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.result-text{
+    letter-spacing: 3px;
+
+    font-size: 1.25rem;
+    /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+    font-weight: 650; 
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.input-area{
+    letter-spacing: 3px;
+    font-size: 1rem;
+    /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+    font-weight: 500; 
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}

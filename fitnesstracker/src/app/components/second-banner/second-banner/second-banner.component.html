@@ -1,0 +1,25 @@
+<div class="banner bg-white text-light text-center py-5 position-relative " style=" background-size: cover; background-position: center;">
+    <div class="container ">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-left">
+          <h2 class="mb-4 heading">SET GOALS.<br>
+            LOG WORKOUTS.<br>
+            STAY ON TRACK.</h2>
+          <p class="mb-2 heading">Easily track your Workouts, set Training Plans, and discover new Workout Routines to crush your goals.</p>
+          <ng-container *ngIf="authService.isLoggedIn(); else loggedOutTemplate">
+            <!-- Content to display after login -->
+          </ng-container>
+          
+          <ng-template #loggedOutTemplate>
+          <a routerLink="signup" class="btn btn-light btn-lg get-started">Get Started</a>
+          </ng-template>
+        </div>
+        <div class="col-md-6">
+          <img src="../../../../assets/images/second-banner.jpg"alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+ 

@@ -1,0 +1,15 @@
+.get-started{
+    width: 60%;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+
+}
+.banner{
+    margin-bottom: 80px;
+}
+.heading{
+    color:black;
+    text-align: left;
+}

@@ -1,0 +1,52 @@
+.transparent-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: relative;
+  width: 25rem;
+  position: relative;
+  left: -30%;
+}
+.submit-button {
+  font-size: 1.25rem;
+  /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+  font-weight: 1200; 
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  display: inline-block;
+  width: auto;
+  padding: 0.375rem 0.75rem;
+  background-color: whitesmoke;
+  border: 1px solid transparent;
+  border-color: #007bff;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.heading-text {
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+  font-weight: 800; 
+  color: black;
+}
+
+.input-area {
+  letter-spacing: 3px;
+  font-size: 1rem;
+  /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+  font-weight: 650; 
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.result-text {  
+  letter-spacing: 3px; 
+  font-size: 1.25rem;
+  /* font-family: "Neue Plak UA Text", Helvetica, Arial, -apple-system, sans-serif; */
+  font-weight: 650;  
+  color: #28a745;
+}

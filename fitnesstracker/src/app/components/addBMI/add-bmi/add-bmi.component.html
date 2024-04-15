@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card mt-5 transparent-card"> 
+        <div class="card-body">
+          <h2 class="text-center mb-3 heading-text">Add BMI</h2>
+          <form [formGroup]="bmiForm" (ngSubmit)="onSubmit()">
+            <div class="row mb-2">
+              <div class="col-12">
+                <div class="form-group "  style="text-align: left;" >
+                  <label for="bmi">BMI:<small>*</small></label>
+                  <input type="number"  min="14"  id="bmi" formControlName="bmi" class="form-control input-area" required>
+                  <div *ngIf="bmiForm.controls['bmi'].invalid && (bmiForm.controls['bmi'].dirty || bmiForm.controls['bmi'].touched)" class="text-danger">
+                    BMI is required.
+                  </div>
+                </div>
+                <div class="form-group "style="text-align: left;">
+                  <label for="recordedDate">Date:<small>*</small></label>
+                  <input type="date" id="recordedDate" formControlName="recordedDate" class="form-control input-area" required>
+                  <div *ngIf="bmiForm.controls['recordedDate'].invalid && (bmiForm.controls['recordedDate'].dirty || bmiForm.controls['recordedDate'].touched)" class="text-danger">
+                    Date is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-link submit-button ">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
